@@ -40,10 +40,14 @@ const styles = StyleSheet.create({
   itemContainer: {
     height: 100,
     width: "90%",
-    // borderColor: none,
-    // borderWidth: 0.5,
     borderRadius: 8,
     flexDirection: "row",
+    shadowColor: "gainsboro",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 1,
   },
   leftContainer: {
     backgroundColor: "gray",
@@ -52,7 +56,6 @@ const styles = StyleSheet.create({
   },
   rightContainer: {
     backgroundColor: "silver",
-    borderWidth: 0.3,
     flex: 1,
     justifyContent: "space-between",
     borderRadius: 8,
