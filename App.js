@@ -1,31 +1,22 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
+import ListItem from "./components/ListItem";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.itemContainer}>
-        <View style={styles.leftContainer}>
-          <Image
-            style={{ width: 100, height: 100, borderRadius: 8 }}
-            source={{ url: "https://picsum.photos/200" }}
-          ></Image>
-        </View>
-        <View style={styles.rightContainer}>
-          <Text numberOfLines={3} style={styles.text}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+      <ListItem
+        thumnail="https://picsum.photos/200/300"
+        title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat. Duis aute irure dolor in
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </Text>
-          <Text style={styles.newsSource}>React News</Text>
-        </View>
-      </View>
-      <StatusBar style="auto" />
+            culpa qui officia deserunt mollit anim id est laborum."
+        author="sampleNews"
+      />
     </View>
   );
 }
@@ -35,39 +26,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
-    justifyContent: "center",
-  },
-  itemContainer: {
-    height: 100,
-    width: "90%",
-    borderRadius: 8,
-    flexDirection: "row",
-    shadowColor: "gainsboro",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 1,
-  },
-  leftContainer: {
-    backgroundColor: "gray",
-    width: 100,
-    borderRadius: 8,
-  },
-  rightContainer: {
-    backgroundColor: "silver",
-    flex: 1,
-    justifyContent: "space-between",
-    borderRadius: 8,
-    marginLeft: 10,
-    padding: 10,
-  },
-  text: {
-    fontSize: 16,
-    color: "white",
-  },
-  newsSource: {
-    fontSize: 12,
-    color: "gray",
+    justifyContent: "space-around",
+    marginTop: 10,
   },
 });
